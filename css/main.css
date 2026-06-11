@@ -1,0 +1,64 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --td-1-rev-color: #454d54;
+  --td-2-rev-color: #575e65;
+  --td-1-color: #a4afba;
+  --td-2-color: #7a7e81;
+  --td-border-color: #7a8695;
+  --header-color: rgb(120, 223, 237);
+  --footer-color: rgb(58, 104, 110);
+  --cell-font-color: rgb(102, 213, 156);
+}
+
+body {
+  text-align: center;
+  font-family: cursive;
+  background-image: url('../images/wallpaper.jpg');
+  min-height: calc(100vh - 20px);
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  color: var(--header-color);
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+footer {
+  color: var(--footer-color);
+}
+.board {
+  margin: 0 auto;
+  border: 8px solid var(--td-border-color);
+  border-radius: 10px;
+  margin-bottom: auto;
+}
+
+.cell {
+  width: 60px;
+  height: 60px;
+  background-image: linear-gradient(var(--td-1-color), var(--td-2-color));
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bolder;
+  color: var(--cell-font-color);
+}
+
+.cell:hover {
+  cursor: pointer;
+}
+
+.revealed {
+  background-image: linear-gradient(
+    var(--td-1-rev-color),
+    var(--td-2-rev-color)
+  );
+}
+
+.revealed:hover {
+  cursor: not-allowed;
+}
