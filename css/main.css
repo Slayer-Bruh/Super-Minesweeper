@@ -7,10 +7,15 @@
   --td-2-rev-color: #575e65;
   --td-1-color: #a4afba;
   --td-2-color: #7a7e81;
-  --td-border-color: #7a8695;
+  --td-border-color: #626b75;
   --font-color: rgb(120, 223, 237);
   --footer-color: rgb(58, 104, 110);
   --cell-font-color: rgb(102, 213, 156);
+  --btn-1-bg-color: rgb(120, 223, 237);
+  --btn-2-bg-color: rgb(49, 142, 155);
+  --btn-1-hover-bg-color: rgb(61, 172, 187);
+  --btn-2-hover-bg-color: rgb(32, 131, 144);
+  --btn-border-color: rgb(8, 72, 102);
 }
 
 body {
@@ -44,9 +49,45 @@ header {
 footer {
   color: var(--footer-color);
 }
+
+.wrapper {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+.levels {
+  position: absolute;
+  right: 100%;
+  top: 0;
+  margin-right: 20px;
+}
+
+.button {
+  width: 120px;
+  padding: 12px 16px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: none;
+  background-image: linear-gradient(
+    var(--btn-1-bg-color),
+    var(--btn-2-bg-color)
+  );
+  border: solid var(--btn-border-color);
+}
+
+.button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(
+    var(--btn-1-hover-bg-color),
+    var(--btn-2-hover-bg-color)
+  );
+}
+
 .board {
   margin: 0 auto;
-  border: 8px solid var(--td-border-color);
+  border: 10px solid var(--td-border-color);
   border-radius: 10px;
   margin-bottom: auto;
 }
@@ -74,4 +115,37 @@ footer {
 
 .revealed:hover {
   cursor: not-allowed;
+}
+
+
+.mines-1 {
+  color: #8bd17c;
+}
+
+.mines-2 {
+  color: #c7e36a;
+}
+
+.mines-3 {
+  color: #f2d049;
+}
+
+.mines-4 {
+  color: #f2a93b;
+}
+
+.mines-5 {
+  color: #f07a2b;
+}
+
+.mines-6 {
+  color: #e84b3a;
+}
+
+.mines-7 {
+  color: #d72638;
+}
+
+.mines-8 {
+  color: #8b0000;
 }

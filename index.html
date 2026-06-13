@@ -11,7 +11,16 @@
     <header><h1>Super Minesweeper</h1></header>
     <button class="smiley" onclick="restartGame()">🙂</button>
     <h2 class="lives">❤️❤️❤️</h2>
-    <table class="board"></table>
+
+    <div class="wrapper">
+      <div class="levels">
+        <button class="button" onclick="changeLevel(0)">Beginner</button>
+        <button class="button" onclick="changeLevel(1)">Medium</button>
+        <button class="button" onclick="changeLevel(2)">Expert</button>
+      </div>
+
+      <table class="board"></table>
+    </div>
 
     <footer>
       <h2>Nevo Israeli</h2>
